@@ -1,3 +1,5 @@
+#include "core/util.h"
+
 #include "random_player.h"
 #include "random.h"
 
@@ -7,11 +9,14 @@ namespace random_player {
     }
 
     int RandomPlayer::hand() {
-        return random(3);
+        return random(core::chopsticks(core::index(this)));
     }
 
     int RandomPlayer::guess( const std::vector<int>& /*other_guesses*/ ) {
-        return random(9);
+        int guess = random(core::chopstick_count());
+        while( !core::valid_guess(guess) )
+            guess = random(core::chopstick_count());
+        return guess;
     }
 
     void RandomPlayer::settle_round(
