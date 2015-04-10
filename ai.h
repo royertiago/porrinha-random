@@ -1,3 +1,3 @@
 namespace random_player {
-    Player * generate( int players, int chopsticks );
+    Player * generate( int, char ** );
 } // namespace human_player

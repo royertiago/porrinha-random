@@ -3,7 +3,7 @@
 
 namespace random_player {
 
-    Player * generate( int /*players*/, int /*chopsticks*/ ) {
+    Player * generate( int /*argc*/, char ** /*argv*/ ) {
         return new RandomPlayer;
     }
 
