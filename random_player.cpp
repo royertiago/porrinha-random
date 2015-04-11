@@ -8,6 +8,10 @@ namespace random_player {
         return "Random";
     }
 
+    void RandomPlayer::begin_game() {
+        // no-op
+    }
+
     int RandomPlayer::hand() {
         return random(core::chopsticks(core::index(this)));
     }
@@ -19,7 +23,11 @@ namespace random_player {
         return guess;
     }
 
-    void RandomPlayer::settle_round() {
+    void RandomPlayer::end_round() {
+        // no-op
+    }
+
+    void RandomPlayer::end_game() {
         // no-op
     }
 
