@@ -3,7 +3,7 @@
 
 namespace random_player {
 
-    Player * generate( int /*argc*/, char ** /*argv*/ ) {
+    Player * generate( cmdline::args&& /*args*/ ) {
         return new RandomPlayer;
     }
 

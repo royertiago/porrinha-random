@@ -1,3 +1,3 @@
 namespace random_player {
-    Player * generate( int, char ** );
+    Player * generate( cmdline::args&& );
 } // namespace human_player
